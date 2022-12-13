@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -273,20 +274,41 @@ Partial Class Form1
         Me.Iced_chocolate_but = New System.Windows.Forms.Button()
         Me.Iced_chocolate_qty = New System.Windows.Forms.TextBox()
         Me.Iced_chocolate = New System.Windows.Forms.Label()
-        Me.price = New System.Windows.Forms.ListBox()
-        Me.orders = New System.Windows.Forms.ListBox()
-        Me.Label84 = New System.Windows.Forms.Label()
-        Me.Label85 = New System.Windows.Forms.Label()
-        Me.Label86 = New System.Windows.Forms.Label()
-        Me.total = New System.Windows.Forms.TextBox()
-        Me.paid = New System.Windows.Forms.TextBox()
-        Me.change = New System.Windows.Forms.TextBox()
-        Me.Done_but = New System.Windows.Forms.Button()
         Me.Label87 = New System.Windows.Forms.Label()
         Me.Proceed_but = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.Label85 = New System.Windows.Forms.Label()
+        Me.Label86 = New System.Windows.Forms.Label()
+        Me.sub_tot = New System.Windows.Forms.TextBox()
+        Me.Done_but = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Costumer_name = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.num_customer = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.dc1 = New System.Windows.Forms.RadioButton()
+        Me.dc2 = New System.Windows.Forms.RadioButton()
+        Me.Panel27 = New System.Windows.Forms.Panel()
+        Me.num_discounted = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.discounted_amount = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Panel28 = New System.Windows.Forms.Panel()
+        Me.vat = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.Column_qty = New System.Windows.Forms.ColumnHeader()
+        Me.Column_Desc = New System.Windows.Forms.ColumnHeader()
+        Me.Column_Price = New System.Windows.Forms.ColumnHeader()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.tot_due = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.bayad = New System.Windows.Forms.TextBox()
+        Me.sukli = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -314,6 +336,8 @@ Partial Class Form1
         Me.Panel25.SuspendLayout()
         Me.Panel26.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel27.SuspendLayout()
+        Me.Panel28.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -722,7 +746,7 @@ Partial Class Form1
         'Red_wine_but
         '
         Me.Red_wine_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Red_wine_but.Location = New System.Drawing.Point(505, 145)
+        Me.Red_wine_but.Location = New System.Drawing.Point(502, 145)
         Me.Red_wine_but.Name = "Red_wine_but"
         Me.Red_wine_but.Size = New System.Drawing.Size(39, 22)
         Me.Red_wine_but.TabIndex = 41
@@ -732,7 +756,7 @@ Partial Class Form1
         'White_wine_but
         '
         Me.White_wine_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.White_wine_but.Location = New System.Drawing.Point(505, 168)
+        Me.White_wine_but.Location = New System.Drawing.Point(502, 168)
         Me.White_wine_but.Name = "White_wine_but"
         Me.White_wine_but.Size = New System.Drawing.Size(39, 22)
         Me.White_wine_but.TabIndex = 43
@@ -750,7 +774,7 @@ Partial Class Form1
         'Gin_Tonic_but
         '
         Me.Gin_Tonic_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Gin_Tonic_but.Location = New System.Drawing.Point(505, 191)
+        Me.Gin_Tonic_but.Location = New System.Drawing.Point(502, 191)
         Me.Gin_Tonic_but.Name = "Gin_Tonic_but"
         Me.Gin_Tonic_but.Size = New System.Drawing.Size(39, 22)
         Me.Gin_Tonic_but.TabIndex = 45
@@ -768,7 +792,7 @@ Partial Class Form1
         'French_toast_but
         '
         Me.French_toast_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.French_toast_but.Location = New System.Drawing.Point(505, 318)
+        Me.French_toast_but.Location = New System.Drawing.Point(502, 318)
         Me.French_toast_but.Name = "French_toast_but"
         Me.French_toast_but.Size = New System.Drawing.Size(39, 22)
         Me.French_toast_but.TabIndex = 51
@@ -786,7 +810,7 @@ Partial Class Form1
         'Breakfast_but
         '
         Me.Breakfast_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Breakfast_but.Location = New System.Drawing.Point(505, 295)
+        Me.Breakfast_but.Location = New System.Drawing.Point(502, 295)
         Me.Breakfast_but.Name = "Breakfast_but"
         Me.Breakfast_but.Size = New System.Drawing.Size(39, 22)
         Me.Breakfast_but.TabIndex = 49
@@ -804,7 +828,7 @@ Partial Class Form1
         'Pancake_but
         '
         Me.Pancake_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Pancake_but.Location = New System.Drawing.Point(505, 272)
+        Me.Pancake_but.Location = New System.Drawing.Point(502, 272)
         Me.Pancake_but.Name = "Pancake_but"
         Me.Pancake_but.Size = New System.Drawing.Size(39, 22)
         Me.Pancake_but.TabIndex = 47
@@ -822,7 +846,7 @@ Partial Class Form1
         'Longsilog_but
         '
         Me.Longsilog_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Longsilog_but.Location = New System.Drawing.Point(505, 387)
+        Me.Longsilog_but.Location = New System.Drawing.Point(502, 387)
         Me.Longsilog_but.Name = "Longsilog_but"
         Me.Longsilog_but.Size = New System.Drawing.Size(39, 22)
         Me.Longsilog_but.TabIndex = 57
@@ -840,7 +864,7 @@ Partial Class Form1
         'Tapsilog_but
         '
         Me.Tapsilog_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Tapsilog_but.Location = New System.Drawing.Point(505, 364)
+        Me.Tapsilog_but.Location = New System.Drawing.Point(502, 364)
         Me.Tapsilog_but.Name = "Tapsilog_but"
         Me.Tapsilog_but.Size = New System.Drawing.Size(39, 22)
         Me.Tapsilog_but.TabIndex = 55
@@ -858,7 +882,7 @@ Partial Class Form1
         'Tocilog_but
         '
         Me.Tocilog_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Tocilog_but.Location = New System.Drawing.Point(505, 341)
+        Me.Tocilog_but.Location = New System.Drawing.Point(502, 341)
         Me.Tocilog_but.Name = "Tocilog_but"
         Me.Tocilog_but.Size = New System.Drawing.Size(39, 22)
         Me.Tocilog_but.TabIndex = 53
@@ -876,7 +900,7 @@ Partial Class Form1
         'Pesto_but
         '
         Me.Pesto_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Pesto_but.Location = New System.Drawing.Point(505, 499)
+        Me.Pesto_but.Location = New System.Drawing.Point(502, 499)
         Me.Pesto_but.Name = "Pesto_but"
         Me.Pesto_but.Size = New System.Drawing.Size(39, 22)
         Me.Pesto_but.TabIndex = 63
@@ -894,7 +918,7 @@ Partial Class Form1
         'Aglio_but
         '
         Me.Aglio_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Aglio_but.Location = New System.Drawing.Point(505, 476)
+        Me.Aglio_but.Location = New System.Drawing.Point(502, 476)
         Me.Aglio_but.Name = "Aglio_but"
         Me.Aglio_but.Size = New System.Drawing.Size(39, 22)
         Me.Aglio_but.TabIndex = 61
@@ -912,7 +936,7 @@ Partial Class Form1
         'Carbonara_but
         '
         Me.Carbonara_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Carbonara_but.Location = New System.Drawing.Point(505, 453)
+        Me.Carbonara_but.Location = New System.Drawing.Point(502, 453)
         Me.Carbonara_but.Name = "Carbonara_but"
         Me.Carbonara_but.Size = New System.Drawing.Size(39, 22)
         Me.Carbonara_but.TabIndex = 59
@@ -930,7 +954,7 @@ Partial Class Form1
         'Spicy_Spanish_but
         '
         Me.Spicy_Spanish_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Spicy_Spanish_but.Location = New System.Drawing.Point(505, 545)
+        Me.Spicy_Spanish_but.Location = New System.Drawing.Point(502, 545)
         Me.Spicy_Spanish_but.Name = "Spicy_Spanish_but"
         Me.Spicy_Spanish_but.Size = New System.Drawing.Size(39, 22)
         Me.Spicy_Spanish_but.TabIndex = 67
@@ -948,7 +972,7 @@ Partial Class Form1
         'Bolognese_but
         '
         Me.Bolognese_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Bolognese_but.Location = New System.Drawing.Point(505, 522)
+        Me.Bolognese_but.Location = New System.Drawing.Point(502, 522)
         Me.Bolognese_but.Name = "Bolognese_but"
         Me.Bolognese_but.Size = New System.Drawing.Size(39, 22)
         Me.Bolognese_but.TabIndex = 65
@@ -966,7 +990,7 @@ Partial Class Form1
         'Tuna_Melt_but
         '
         Me.Tuna_Melt_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Tuna_Melt_but.Location = New System.Drawing.Point(505, 702)
+        Me.Tuna_Melt_but.Location = New System.Drawing.Point(502, 702)
         Me.Tuna_Melt_but.Name = "Tuna_Melt_but"
         Me.Tuna_Melt_but.Size = New System.Drawing.Size(39, 22)
         Me.Tuna_Melt_but.TabIndex = 89
@@ -984,7 +1008,7 @@ Partial Class Form1
         'Grilled_Cheese_but
         '
         Me.Grilled_Cheese_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Grilled_Cheese_but.Location = New System.Drawing.Point(505, 679)
+        Me.Grilled_Cheese_but.Location = New System.Drawing.Point(502, 679)
         Me.Grilled_Cheese_but.Name = "Grilled_Cheese_but"
         Me.Grilled_Cheese_but.Size = New System.Drawing.Size(39, 22)
         Me.Grilled_Cheese_but.TabIndex = 87
@@ -1002,7 +1026,7 @@ Partial Class Form1
         'Avocado_toast_but
         '
         Me.Avocado_toast_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Avocado_toast_but.Location = New System.Drawing.Point(505, 656)
+        Me.Avocado_toast_but.Location = New System.Drawing.Point(502, 656)
         Me.Avocado_toast_but.Name = "Avocado_toast_but"
         Me.Avocado_toast_but.Size = New System.Drawing.Size(39, 22)
         Me.Avocado_toast_but.TabIndex = 85
@@ -1020,7 +1044,7 @@ Partial Class Form1
         'Clubhouse_but
         '
         Me.Clubhouse_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Clubhouse_but.Location = New System.Drawing.Point(505, 633)
+        Me.Clubhouse_but.Location = New System.Drawing.Point(502, 633)
         Me.Clubhouse_but.Name = "Clubhouse_but"
         Me.Clubhouse_but.Size = New System.Drawing.Size(39, 22)
         Me.Clubhouse_but.TabIndex = 83
@@ -1038,7 +1062,7 @@ Partial Class Form1
         'Classic_tuna_but
         '
         Me.Classic_tuna_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Classic_tuna_but.Location = New System.Drawing.Point(505, 610)
+        Me.Classic_tuna_but.Location = New System.Drawing.Point(502, 610)
         Me.Classic_tuna_but.Name = "Classic_tuna_but"
         Me.Classic_tuna_but.Size = New System.Drawing.Size(39, 22)
         Me.Classic_tuna_but.TabIndex = 81
@@ -1188,7 +1212,7 @@ Partial Class Form1
         'Hot_spanishlatte_but
         '
         Me.Hot_spanishlatte_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_spanishlatte_but.Location = New System.Drawing.Point(998, 259)
+        Me.Hot_spanishlatte_but.Location = New System.Drawing.Point(995, 259)
         Me.Hot_spanishlatte_but.Name = "Hot_spanishlatte_but"
         Me.Hot_spanishlatte_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_spanishlatte_but.TabIndex = 115
@@ -1206,7 +1230,7 @@ Partial Class Form1
         'Hot_blacklatte_but
         '
         Me.Hot_blacklatte_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_blacklatte_but.Location = New System.Drawing.Point(998, 236)
+        Me.Hot_blacklatte_but.Location = New System.Drawing.Point(995, 236)
         Me.Hot_blacklatte_but.Name = "Hot_blacklatte_but"
         Me.Hot_blacklatte_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_blacklatte_but.TabIndex = 113
@@ -1224,7 +1248,7 @@ Partial Class Form1
         'Hot_latte_but
         '
         Me.Hot_latte_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_latte_but.Location = New System.Drawing.Point(998, 213)
+        Me.Hot_latte_but.Location = New System.Drawing.Point(995, 213)
         Me.Hot_latte_but.Name = "Hot_latte_but"
         Me.Hot_latte_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_latte_but.TabIndex = 111
@@ -1242,7 +1266,7 @@ Partial Class Form1
         'Hot_flatwhite_but
         '
         Me.Hot_flatwhite_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_flatwhite_but.Location = New System.Drawing.Point(998, 190)
+        Me.Hot_flatwhite_but.Location = New System.Drawing.Point(995, 190)
         Me.Hot_flatwhite_but.Name = "Hot_flatwhite_but"
         Me.Hot_flatwhite_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_flatwhite_but.TabIndex = 109
@@ -1260,7 +1284,7 @@ Partial Class Form1
         'Hot_cappucino_but
         '
         Me.Hot_cappucino_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_cappucino_but.Location = New System.Drawing.Point(998, 167)
+        Me.Hot_cappucino_but.Location = New System.Drawing.Point(995, 167)
         Me.Hot_cappucino_but.Name = "Hot_cappucino_but"
         Me.Hot_cappucino_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_cappucino_but.TabIndex = 107
@@ -1278,7 +1302,7 @@ Partial Class Form1
         'Hot_americano_but
         '
         Me.Hot_americano_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_americano_but.Location = New System.Drawing.Point(998, 144)
+        Me.Hot_americano_but.Location = New System.Drawing.Point(995, 144)
         Me.Hot_americano_but.Name = "Hot_americano_but"
         Me.Hot_americano_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_americano_but.TabIndex = 105
@@ -1655,7 +1679,7 @@ Partial Class Form1
         'Hot_matchalatte_but
         '
         Me.Hot_matchalatte_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_matchalatte_but.Location = New System.Drawing.Point(998, 282)
+        Me.Hot_matchalatte_but.Location = New System.Drawing.Point(995, 282)
         Me.Hot_matchalatte_but.Name = "Hot_matchalatte_but"
         Me.Hot_matchalatte_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_matchalatte_but.TabIndex = 126
@@ -1718,7 +1742,7 @@ Partial Class Form1
         'Hot_pistachio_but
         '
         Me.Hot_pistachio_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_pistachio_but.Location = New System.Drawing.Point(998, 306)
+        Me.Hot_pistachio_but.Location = New System.Drawing.Point(995, 305)
         Me.Hot_pistachio_but.Name = "Hot_pistachio_but"
         Me.Hot_pistachio_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_pistachio_but.TabIndex = 130
@@ -1782,7 +1806,7 @@ Partial Class Form1
         'Hot_caramel_but
         '
         Me.Hot_caramel_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_caramel_but.Location = New System.Drawing.Point(998, 329)
+        Me.Hot_caramel_but.Location = New System.Drawing.Point(995, 328)
         Me.Hot_caramel_but.Name = "Hot_caramel_but"
         Me.Hot_caramel_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_caramel_but.TabIndex = 134
@@ -1845,7 +1869,7 @@ Partial Class Form1
         'Hot_krav_but
         '
         Me.Hot_krav_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_krav_but.Location = New System.Drawing.Point(998, 352)
+        Me.Hot_krav_but.Location = New System.Drawing.Point(995, 351)
         Me.Hot_krav_but.Name = "Hot_krav_but"
         Me.Hot_krav_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_krav_but.TabIndex = 126
@@ -1908,7 +1932,7 @@ Partial Class Form1
         'Hot_classicmocha_but
         '
         Me.Hot_classicmocha_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_classicmocha_but.Location = New System.Drawing.Point(998, 375)
+        Me.Hot_classicmocha_but.Location = New System.Drawing.Point(995, 374)
         Me.Hot_classicmocha_but.Name = "Hot_classicmocha_but"
         Me.Hot_classicmocha_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_classicmocha_but.TabIndex = 126
@@ -1971,7 +1995,7 @@ Partial Class Form1
         'Hot_whitemocha_but
         '
         Me.Hot_whitemocha_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_whitemocha_but.Location = New System.Drawing.Point(998, 398)
+        Me.Hot_whitemocha_but.Location = New System.Drawing.Point(995, 397)
         Me.Hot_whitemocha_but.Name = "Hot_whitemocha_but"
         Me.Hot_whitemocha_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_whitemocha_but.TabIndex = 126
@@ -2034,7 +2058,7 @@ Partial Class Form1
         'Hot_chocolate_but
         '
         Me.Hot_chocolate_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Hot_chocolate_but.Location = New System.Drawing.Point(998, 421)
+        Me.Hot_chocolate_but.Location = New System.Drawing.Point(995, 420)
         Me.Hot_chocolate_but.Name = "Hot_chocolate_but"
         Me.Hot_chocolate_but.Size = New System.Drawing.Size(39, 22)
         Me.Hot_chocolate_but.TabIndex = 126
@@ -2141,7 +2165,7 @@ Partial Class Form1
         'Iced_americano_but
         '
         Me.Iced_americano_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_americano_but.Location = New System.Drawing.Point(998, 477)
+        Me.Iced_americano_but.Location = New System.Drawing.Point(995, 477)
         Me.Iced_americano_but.Name = "Iced_americano_but"
         Me.Iced_americano_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_americano_but.TabIndex = 130
@@ -2204,7 +2228,7 @@ Partial Class Form1
         'Iced_latte_but
         '
         Me.Iced_latte_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_latte_but.Location = New System.Drawing.Point(998, 500)
+        Me.Iced_latte_but.Location = New System.Drawing.Point(995, 500)
         Me.Iced_latte_but.Name = "Iced_latte_but"
         Me.Iced_latte_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_latte_but.TabIndex = 134
@@ -2267,7 +2291,7 @@ Partial Class Form1
         'Iced_blacklatte_but
         '
         Me.Iced_blacklatte_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_blacklatte_but.Location = New System.Drawing.Point(998, 523)
+        Me.Iced_blacklatte_but.Location = New System.Drawing.Point(995, 523)
         Me.Iced_blacklatte_but.Name = "Iced_blacklatte_but"
         Me.Iced_blacklatte_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_blacklatte_but.TabIndex = 142
@@ -2330,7 +2354,7 @@ Partial Class Form1
         'Iced_spanishlatte_but
         '
         Me.Iced_spanishlatte_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_spanishlatte_but.Location = New System.Drawing.Point(998, 546)
+        Me.Iced_spanishlatte_but.Location = New System.Drawing.Point(995, 546)
         Me.Iced_spanishlatte_but.Name = "Iced_spanishlatte_but"
         Me.Iced_spanishlatte_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_spanishlatte_but.TabIndex = 146
@@ -2393,7 +2417,7 @@ Partial Class Form1
         'Iced_matchalatte_but
         '
         Me.Iced_matchalatte_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_matchalatte_but.Location = New System.Drawing.Point(998, 569)
+        Me.Iced_matchalatte_but.Location = New System.Drawing.Point(995, 569)
         Me.Iced_matchalatte_but.Name = "Iced_matchalatte_but"
         Me.Iced_matchalatte_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_matchalatte_but.TabIndex = 150
@@ -2456,7 +2480,7 @@ Partial Class Form1
         'Iced_pistachio_but
         '
         Me.Iced_pistachio_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_pistachio_but.Location = New System.Drawing.Point(998, 592)
+        Me.Iced_pistachio_but.Location = New System.Drawing.Point(995, 592)
         Me.Iced_pistachio_but.Name = "Iced_pistachio_but"
         Me.Iced_pistachio_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_pistachio_but.TabIndex = 154
@@ -2519,7 +2543,7 @@ Partial Class Form1
         'Iced_caramel_but
         '
         Me.Iced_caramel_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_caramel_but.Location = New System.Drawing.Point(998, 615)
+        Me.Iced_caramel_but.Location = New System.Drawing.Point(995, 615)
         Me.Iced_caramel_but.Name = "Iced_caramel_but"
         Me.Iced_caramel_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_caramel_but.TabIndex = 158
@@ -2582,7 +2606,7 @@ Partial Class Form1
         'Iced_krav_but
         '
         Me.Iced_krav_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_krav_but.Location = New System.Drawing.Point(998, 638)
+        Me.Iced_krav_but.Location = New System.Drawing.Point(995, 638)
         Me.Iced_krav_but.Name = "Iced_krav_but"
         Me.Iced_krav_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_krav_but.TabIndex = 162
@@ -2645,7 +2669,7 @@ Partial Class Form1
         'Iced_strcheesecake_but
         '
         Me.Iced_strcheesecake_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_strcheesecake_but.Location = New System.Drawing.Point(998, 661)
+        Me.Iced_strcheesecake_but.Location = New System.Drawing.Point(995, 661)
         Me.Iced_strcheesecake_but.Name = "Iced_strcheesecake_but"
         Me.Iced_strcheesecake_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_strcheesecake_but.TabIndex = 166
@@ -2708,7 +2732,7 @@ Partial Class Form1
         'Iced_classicmocha_but
         '
         Me.Iced_classicmocha_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_classicmocha_but.Location = New System.Drawing.Point(998, 684)
+        Me.Iced_classicmocha_but.Location = New System.Drawing.Point(995, 684)
         Me.Iced_classicmocha_but.Name = "Iced_classicmocha_but"
         Me.Iced_classicmocha_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_classicmocha_but.TabIndex = 170
@@ -2771,7 +2795,7 @@ Partial Class Form1
         'Iced_whitemocha_but
         '
         Me.Iced_whitemocha_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_whitemocha_but.Location = New System.Drawing.Point(998, 707)
+        Me.Iced_whitemocha_but.Location = New System.Drawing.Point(995, 707)
         Me.Iced_whitemocha_but.Name = "Iced_whitemocha_but"
         Me.Iced_whitemocha_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_whitemocha_but.TabIndex = 174
@@ -2834,7 +2858,7 @@ Partial Class Form1
         'Iced_milo_but
         '
         Me.Iced_milo_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_milo_but.Location = New System.Drawing.Point(998, 730)
+        Me.Iced_milo_but.Location = New System.Drawing.Point(995, 730)
         Me.Iced_milo_but.Name = "Iced_milo_but"
         Me.Iced_milo_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_milo_but.TabIndex = 134
@@ -2897,7 +2921,7 @@ Partial Class Form1
         'Iced_chocolate_but
         '
         Me.Iced_chocolate_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Iced_chocolate_but.Location = New System.Drawing.Point(998, 753)
+        Me.Iced_chocolate_but.Location = New System.Drawing.Point(995, 753)
         Me.Iced_chocolate_but.Name = "Iced_chocolate_but"
         Me.Iced_chocolate_but.Size = New System.Drawing.Size(39, 22)
         Me.Iced_chocolate_but.TabIndex = 134
@@ -2923,98 +2947,12 @@ Partial Class Form1
         Me.Iced_chocolate.TabIndex = 132
         Me.Iced_chocolate.Text = "Iced Chocolate"
         '
-        'price
-        '
-        Me.price.FormattingEnabled = True
-        Me.price.ItemHeight = 15
-        Me.price.Location = New System.Drawing.Point(1149, 144)
-        Me.price.Name = "price"
-        Me.price.Size = New System.Drawing.Size(76, 34)
-        Me.price.TabIndex = 176
-        '
-        'orders
-        '
-        Me.orders.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.orders.FormattingEnabled = True
-        Me.orders.Items.AddRange(New Object() {"Qty" & Global.Microsoft.VisualBasic.ChrW(9) & "Description" & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & Global.Microsoft.VisualBasic.ChrW(9) & "Price", "——————————————————————————————————————————"})
-        Me.orders.Location = New System.Drawing.Point(1104, 143)
-        Me.orders.Name = "orders"
-        Me.orders.Size = New System.Drawing.Size(412, 316)
-        Me.orders.TabIndex = 177
-        '
-        'Label84
-        '
-        Me.Label84.AutoSize = True
-        Me.Label84.BackColor = System.Drawing.Color.Transparent
-        Me.Label84.Font = New System.Drawing.Font("HGPGothicE", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label84.Location = New System.Drawing.Point(1204, 633)
-        Me.Label84.Name = "Label84"
-        Me.Label84.Size = New System.Drawing.Size(53, 16)
-        Me.Label84.TabIndex = 178
-        Me.Label84.Text = "Total "
-        '
-        'Label85
-        '
-        Me.Label85.AutoSize = True
-        Me.Label85.BackColor = System.Drawing.Color.Transparent
-        Me.Label85.Font = New System.Drawing.Font("HGPGothicE", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label85.Location = New System.Drawing.Point(1204, 659)
-        Me.Label85.Name = "Label85"
-        Me.Label85.Size = New System.Drawing.Size(40, 16)
-        Me.Label85.TabIndex = 179
-        Me.Label85.Text = "Paid"
-        '
-        'Label86
-        '
-        Me.Label86.AutoSize = True
-        Me.Label86.BackColor = System.Drawing.Color.Transparent
-        Me.Label86.Font = New System.Drawing.Font("HGPGothicE", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label86.Location = New System.Drawing.Point(1204, 686)
-        Me.Label86.Name = "Label86"
-        Me.Label86.Size = New System.Drawing.Size(62, 16)
-        Me.Label86.TabIndex = 180
-        Me.Label86.Text = "Change"
-        '
-        'total
-        '
-        Me.total.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.total.Location = New System.Drawing.Point(1286, 628)
-        Me.total.Name = "total"
-        Me.total.Size = New System.Drawing.Size(116, 22)
-        Me.total.TabIndex = 181
-        '
-        'paid
-        '
-        Me.paid.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.paid.Location = New System.Drawing.Point(1286, 656)
-        Me.paid.Name = "paid"
-        Me.paid.Size = New System.Drawing.Size(116, 22)
-        Me.paid.TabIndex = 182
-        '
-        'change
-        '
-        Me.change.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.change.Location = New System.Drawing.Point(1286, 684)
-        Me.change.Name = "change"
-        Me.change.Size = New System.Drawing.Size(116, 22)
-        Me.change.TabIndex = 183
-        '
-        'Done_but
-        '
-        Me.Done_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Done_but.Location = New System.Drawing.Point(1275, 723)
-        Me.Done_but.Name = "Done_but"
-        Me.Done_but.Size = New System.Drawing.Size(74, 25)
-        Me.Done_but.TabIndex = 184
-        Me.Done_but.Text = "Done"
-        Me.Done_but.UseVisualStyleBackColor = True
-        '
         'Label87
         '
         Me.Label87.AutoSize = True
         Me.Label87.BackColor = System.Drawing.Color.Transparent
         Me.Label87.Font = New System.Drawing.Font("HGPGothicE", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label87.Location = New System.Drawing.Point(1245, 90)
+        Me.Label87.Location = New System.Drawing.Point(1223, 90)
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(149, 24)
         Me.Label87.TabIndex = 185
@@ -3023,7 +2961,7 @@ Partial Class Form1
         'Proceed_but
         '
         Me.Proceed_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Proceed_but.Location = New System.Drawing.Point(1275, 497)
+        Me.Proceed_but.Location = New System.Drawing.Point(1170, 390)
         Me.Proceed_but.Name = "Proceed_but"
         Me.Proceed_but.Size = New System.Drawing.Size(74, 25)
         Me.Proceed_but.TabIndex = 186
@@ -3035,22 +2973,11 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(1245, 476)
+        Me.Label6.Location = New System.Drawing.Point(1141, 369)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(130, 13)
         Me.Label6.TabIndex = 187
         Me.Label6.Text = "(proceed to payment)"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("HGPGothicE", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(1226, 562)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(176, 24)
-        Me.Label7.TabIndex = 188
-        Me.Label7.Text = "P A Y M E N T"
         '
         'PictureBox1
         '
@@ -3063,6 +2990,309 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 189
         Me.PictureBox1.TabStop = False
         '
+        'Label84
+        '
+        Me.Label84.AutoSize = True
+        Me.Label84.BackColor = System.Drawing.Color.Transparent
+        Me.Label84.Font = New System.Drawing.Font("HGPGothicE", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label84.Location = New System.Drawing.Point(1096, 543)
+        Me.Label84.Name = "Label84"
+        Me.Label84.Size = New System.Drawing.Size(72, 16)
+        Me.Label84.TabIndex = 178
+        Me.Label84.Text = "Subtotal"
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.BackColor = System.Drawing.Color.Transparent
+        Me.Label85.Font = New System.Drawing.Font("HGPGothicE", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label85.Location = New System.Drawing.Point(1096, 621)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(40, 16)
+        Me.Label85.TabIndex = 179
+        Me.Label85.Text = "Paid"
+        '
+        'Label86
+        '
+        Me.Label86.AutoSize = True
+        Me.Label86.BackColor = System.Drawing.Color.Transparent
+        Me.Label86.Font = New System.Drawing.Font("HGPGothicE", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label86.Location = New System.Drawing.Point(1096, 647)
+        Me.Label86.Name = "Label86"
+        Me.Label86.Size = New System.Drawing.Size(62, 16)
+        Me.Label86.TabIndex = 180
+        Me.Label86.Text = "Change"
+        '
+        'sub_tot
+        '
+        Me.sub_tot.Enabled = False
+        Me.sub_tot.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.sub_tot.Location = New System.Drawing.Point(1187, 543)
+        Me.sub_tot.Name = "sub_tot"
+        Me.sub_tot.Size = New System.Drawing.Size(116, 20)
+        Me.sub_tot.TabIndex = 181
+        '
+        'Done_but
+        '
+        Me.Done_but.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Done_but.Location = New System.Drawing.Point(1271, 687)
+        Me.Done_but.Name = "Done_but"
+        Me.Done_but.Size = New System.Drawing.Size(74, 25)
+        Me.Done_but.TabIndex = 184
+        Me.Done_but.Text = "Done"
+        Me.Done_but.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("HGPGothicE", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.Location = New System.Drawing.Point(1236, 458)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(176, 24)
+        Me.Label7.TabIndex = 188
+        Me.Label7.Text = "P A Y M E N T"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("HGPGothicE", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(1096, 491)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 16)
+        Me.Label8.TabIndex = 190
+        Me.Label8.Text = "Name"
+        '
+        'Costumer_name
+        '
+        Me.Costumer_name.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Costumer_name.Location = New System.Drawing.Point(1187, 491)
+        Me.Costumer_name.Name = "Costumer_name"
+        Me.Costumer_name.Size = New System.Drawing.Size(116, 20)
+        Me.Costumer_name.TabIndex = 191
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label9.Location = New System.Drawing.Point(1096, 521)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(85, 11)
+        Me.Label9.TabIndex = 192
+        Me.Label9.Text = "No. Of Customer"
+        '
+        'num_customer
+        '
+        Me.num_customer.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.num_customer.Location = New System.Drawing.Point(1255, 517)
+        Me.num_customer.Name = "num_customer"
+        Me.num_customer.Size = New System.Drawing.Size(48, 20)
+        Me.num_customer.TabIndex = 193
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label10.Location = New System.Drawing.Point(1309, 488)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(178, 13)
+        Me.Label10.TabIndex = 194
+        Me.Label10.Text = "20% discount if applicable"
+        '
+        'dc1
+        '
+        Me.dc1.AutoSize = True
+        Me.dc1.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.dc1.Location = New System.Drawing.Point(8, 3)
+        Me.dc1.Name = "dc1"
+        Me.dc1.Size = New System.Drawing.Size(47, 15)
+        Me.dc1.TabIndex = 121
+        Me.dc1.TabStop = True
+        Me.dc1.Text = "PWD"
+        Me.dc1.UseVisualStyleBackColor = True
+        '
+        'dc2
+        '
+        Me.dc2.AutoSize = True
+        Me.dc2.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.dc2.Location = New System.Drawing.Point(8, 24)
+        Me.dc2.Name = "dc2"
+        Me.dc2.Size = New System.Drawing.Size(104, 15)
+        Me.dc2.TabIndex = 122
+        Me.dc2.TabStop = True
+        Me.dc2.Text = "Senior Citizen"
+        Me.dc2.UseVisualStyleBackColor = True
+        '
+        'Panel27
+        '
+        Me.Panel27.BackColor = System.Drawing.Color.Transparent
+        Me.Panel27.Controls.Add(Me.dc2)
+        Me.Panel27.Controls.Add(Me.dc1)
+        Me.Panel27.Location = New System.Drawing.Point(1309, 505)
+        Me.Panel27.Name = "Panel27"
+        Me.Panel27.Size = New System.Drawing.Size(145, 47)
+        Me.Panel27.TabIndex = 136
+        '
+        'num_discounted
+        '
+        Me.num_discounted.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.num_discounted.Location = New System.Drawing.Point(8, 20)
+        Me.num_discounted.Name = "num_discounted"
+        Me.num_discounted.Size = New System.Drawing.Size(55, 20)
+        Me.num_discounted.TabIndex = 196
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label11.Location = New System.Drawing.Point(8, 6)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(91, 11)
+        Me.Label11.TabIndex = 195
+        Me.Label11.Text = "No. Of Discounted"
+        '
+        'discounted_amount
+        '
+        Me.discounted_amount.Enabled = False
+        Me.discounted_amount.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.discounted_amount.Location = New System.Drawing.Point(8, 57)
+        Me.discounted_amount.Name = "discounted_amount"
+        Me.discounted_amount.Size = New System.Drawing.Size(55, 20)
+        Me.discounted_amount.TabIndex = 198
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label12.Location = New System.Drawing.Point(8, 43)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(98, 11)
+        Me.Label12.TabIndex = 197
+        Me.Label12.Text = "Discounted amount"
+        '
+        'Panel28
+        '
+        Me.Panel28.BackColor = System.Drawing.Color.Transparent
+        Me.Panel28.Controls.Add(Me.Label12)
+        Me.Panel28.Controls.Add(Me.discounted_amount)
+        Me.Panel28.Controls.Add(Me.Label11)
+        Me.Panel28.Controls.Add(Me.num_discounted)
+        Me.Panel28.Location = New System.Drawing.Point(1309, 552)
+        Me.Panel28.Name = "Panel28"
+        Me.Panel28.Size = New System.Drawing.Size(145, 86)
+        Me.Panel28.TabIndex = 197
+        Me.Panel28.Visible = False
+        '
+        'vat
+        '
+        Me.vat.Enabled = False
+        Me.vat.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.vat.Location = New System.Drawing.Point(1187, 569)
+        Me.vat.Name = "vat"
+        Me.vat.Size = New System.Drawing.Size(116, 20)
+        Me.vat.TabIndex = 244
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("HGPGothicE", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label13.Location = New System.Drawing.Point(1096, 569)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(70, 16)
+        Me.Label13.TabIndex = 243
+        Me.Label13.Text = "Vat 12%"
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Column_qty, Me.Column_Desc, Me.Column_Price})
+        Me.ListView1.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        ListViewItem2.StateImageIndex = 0
+        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem2})
+        Me.ListView1.Location = New System.Drawing.Point(1096, 145)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(374, 215)
+        Me.ListView1.TabIndex = 245
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'Column_qty
+        '
+        Me.Column_qty.Text = "Qty"
+        Me.Column_qty.Width = 50
+        '
+        'Column_Desc
+        '
+        Me.Column_Desc.Text = "Description"
+        Me.Column_Desc.Width = 250
+        '
+        'Column_Price
+        '
+        Me.Column_Price.Text = "Price"
+        Me.Column_Price.Width = 70
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label14.Location = New System.Drawing.Point(1309, 369)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(92, 13)
+        Me.Label14.TabIndex = 247
+        Me.Label14.Text = "(remove order)"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.Location = New System.Drawing.Point(1317, 391)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(74, 25)
+        Me.Button1.TabIndex = 246
+        Me.Button1.Text = "Remove"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'tot_due
+        '
+        Me.tot_due.Enabled = False
+        Me.tot_due.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.tot_due.Location = New System.Drawing.Point(1187, 595)
+        Me.tot_due.Name = "tot_due"
+        Me.tot_due.Size = New System.Drawing.Size(116, 20)
+        Me.tot_due.TabIndex = 249
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("HGPGothicE", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label15.Location = New System.Drawing.Point(1096, 595)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(80, 16)
+        Me.Label15.TabIndex = 248
+        Me.Label15.Text = "Total Due"
+        '
+        'bayad
+        '
+        Me.bayad.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.bayad.Location = New System.Drawing.Point(1187, 621)
+        Me.bayad.Name = "bayad"
+        Me.bayad.Size = New System.Drawing.Size(116, 20)
+        Me.bayad.TabIndex = 250
+        '
+        'sukli
+        '
+        Me.sukli.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.sukli.Location = New System.Drawing.Point(1187, 647)
+        Me.sukli.Name = "sukli"
+        Me.sukli.Size = New System.Drawing.Size(116, 20)
+        Me.sukli.TabIndex = 199
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -3071,20 +3301,32 @@ Partial Class Form1
         Me.BackgroundImage = Global.Krav.My.Resources.Resources.kravbg__1_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1540, 862)
+        Me.Controls.Add(Me.sukli)
+        Me.Controls.Add(Me.bayad)
+        Me.Controls.Add(Me.tot_due)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.vat)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Panel28)
+        Me.Controls.Add(Me.Panel27)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.num_customer)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Costumer_name)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Proceed_but)
         Me.Controls.Add(Me.Label87)
         Me.Controls.Add(Me.Done_but)
-        Me.Controls.Add(Me.change)
-        Me.Controls.Add(Me.paid)
-        Me.Controls.Add(Me.total)
+        Me.Controls.Add(Me.sub_tot)
         Me.Controls.Add(Me.Label86)
         Me.Controls.Add(Me.Label85)
         Me.Controls.Add(Me.Label84)
-        Me.Controls.Add(Me.orders)
-        Me.Controls.Add(Me.price)
         Me.Controls.Add(Me.Panel26)
         Me.Controls.Add(Me.Iced_chocolate_but)
         Me.Controls.Add(Me.Panel25)
@@ -3340,6 +3582,10 @@ Partial Class Form1
         Me.Panel26.ResumeLayout(False)
         Me.Panel26.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel27.ResumeLayout(False)
+        Me.Panel27.PerformLayout()
+        Me.Panel28.ResumeLayout(False)
+        Me.Panel28.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3596,18 +3842,39 @@ Partial Class Form1
     Friend WithEvents Iced_chocolate_but As Button
     Friend WithEvents Iced_chocolate_qty As TextBox
     Friend WithEvents Iced_chocolate As Label
-    Friend WithEvents price As ListBox
-    Friend WithEvents orders As ListBox
-    Friend WithEvents Label84 As Label
-    Friend WithEvents Label85 As Label
-    Friend WithEvents Label86 As Label
-    Friend WithEvents total As TextBox
-    Friend WithEvents paid As TextBox
-    Friend WithEvents change As TextBox
-    Friend WithEvents Done_but As Button
     Friend WithEvents Label87 As Label
     Friend WithEvents Proceed_but As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label84 As Label
+    Friend WithEvents Label85 As Label
+    Friend WithEvents Label86 As Label
+    Friend WithEvents sub_tot As TextBox
+    Friend WithEvents Done_but As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Costumer_name As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents num_customer As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents dc1 As RadioButton
+    Friend WithEvents dc2 As RadioButton
+    Friend WithEvents Panel27 As Panel
+    Friend WithEvents num_discounted As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents discounted_amount As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Panel28 As Panel
+    Friend WithEvents vat As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents Column_qty As ColumnHeader
+    Friend WithEvents Column_Desc As ColumnHeader
+    Friend WithEvents Column_Price As ColumnHeader
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents tot_due As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents bayad As TextBox
+    Friend WithEvents sukli As TextBox
 End Class
