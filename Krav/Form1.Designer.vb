@@ -277,7 +277,6 @@ Partial Class Form1
         Me.Label87 = New System.Windows.Forms.Label()
         Me.Proceed_but = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label84 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
         Me.Label86 = New System.Windows.Forms.Label()
@@ -309,6 +308,8 @@ Partial Class Form1
         Me.Label15 = New System.Windows.Forms.Label()
         Me.bayad = New System.Windows.Forms.TextBox()
         Me.sukli = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -335,9 +336,9 @@ Partial Class Form1
         Me.Panel24.SuspendLayout()
         Me.Panel25.SuspendLayout()
         Me.Panel26.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel27.SuspendLayout()
         Me.Panel28.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -2979,17 +2980,6 @@ Partial Class Form1
         Me.Label6.TabIndex = 187
         Me.Label6.Text = "(proceed to payment)"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.Krav.My.Resources.Resources.logo__3_
-        Me.PictureBox1.Location = New System.Drawing.Point(23, -11)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(178, 154)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 189
-        Me.PictureBox1.TabStop = False
-        '
         'Label84
         '
         Me.Label84.AutoSize = True
@@ -3293,6 +3283,27 @@ Partial Class Form1
         Me.sukli.Size = New System.Drawing.Size(116, 20)
         Me.sukli.TabIndex = 199
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.Krav.My.Resources.Resources.logo__3_
+        Me.PictureBox1.Location = New System.Drawing.Point(23, -11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(178, 154)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 189
+        Me.PictureBox1.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button2.Location = New System.Drawing.Point(1444, 12)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(84, 25)
+        Me.Button2.TabIndex = 353
+        Me.Button2.Text = "CHOOSE UI"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -3301,6 +3312,7 @@ Partial Class Form1
         Me.BackgroundImage = Global.Krav.My.Resources.Resources.kravbg__1_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1540, 862)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.sukli)
         Me.Controls.Add(Me.bayad)
         Me.Controls.Add(Me.tot_due)
@@ -3581,11 +3593,11 @@ Partial Class Form1
         Me.Panel25.PerformLayout()
         Me.Panel26.ResumeLayout(False)
         Me.Panel26.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel27.ResumeLayout(False)
         Me.Panel27.PerformLayout()
         Me.Panel28.ResumeLayout(False)
         Me.Panel28.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3845,7 +3857,6 @@ Partial Class Form1
     Friend WithEvents Label87 As Label
     Friend WithEvents Proceed_but As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label84 As Label
     Friend WithEvents Label85 As Label
     Friend WithEvents Label86 As Label
@@ -3877,4 +3888,6 @@ Partial Class Form1
     Friend WithEvents Label15 As Label
     Friend WithEvents bayad As TextBox
     Friend WithEvents sukli As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button2 As Button
 End Class

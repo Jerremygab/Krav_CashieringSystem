@@ -765,11 +765,11 @@ Public Class Form1
         Dim disc, due As Single
         Dim no_discount As Integer
 
-        due = Val(tot_due.Text)
+        due = Val(sub_tot.Text)
         no_discount = Val(num_discounted.Text)
 
         If dc1.Checked Or dc2.Checked Then
-            disc = ((due * 0.2) - Val(vat.Text)) * no_discount
+            disc = (((due * 0.2) - Val(vat.Text)) * no_discount)
         End If
 
 
@@ -793,5 +793,10 @@ Public Class Form1
             MsgBox("Invalid Amount")
         End If
         sukli.Text = (Val(bayad.Text) - Val(tot_due.Text)) + Val(discounted_amount.Text)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Form3.Show()
+        Me.Hide()
     End Sub
 End Class
