@@ -1,4 +1,5 @@
 ﻿Public Class Form3
+    'Hello
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ui2.Click
         Form2.Show()
         Me.Hide()
