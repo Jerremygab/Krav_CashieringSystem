@@ -22,7 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
         Me.Tuna_Melt_but = New System.Windows.Forms.Button()
         Me.Tuna_Melt_qty = New System.Windows.Forms.TextBox()
         Me.Grilled_Cheese_but = New System.Windows.Forms.Button()
@@ -2118,6 +2118,7 @@ Partial Class Form2
         Me.sukli.Name = "sukli"
         Me.sukli.Size = New System.Drawing.Size(116, 20)
         Me.sukli.TabIndex = 341
+        Me.sukli.Visible = False
         '
         'bayad
         '
@@ -2172,8 +2173,8 @@ Partial Class Form2
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Column_qty, Me.Column_Desc, Me.Column_Price})
         Me.ListView1.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        ListViewItem3.StateImageIndex = 0
-        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem3})
+        ListViewItem1.StateImageIndex = 0
+        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
         Me.ListView1.Location = New System.Drawing.Point(1141, 151)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(374, 215)
@@ -2423,6 +2424,7 @@ Partial Class Form2
         Me.Label86.Size = New System.Drawing.Size(62, 16)
         Me.Label86.TabIndex = 328
         Me.Label86.Text = "Change"
+        Me.Label86.Visible = False
         '
         'Label85
         '
