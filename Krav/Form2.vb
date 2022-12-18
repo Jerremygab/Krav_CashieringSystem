@@ -798,9 +798,9 @@
         vats = (TotalValue * 12) / 100
         tot_vat = TotalValue + vats
 
-        sub_tot.Text = TotalValue
-        tot_due.Text = tot_vat
-        vat.Text = vats
+        Subtotal_txt.Text = TotalValue
+        Totaldue_txt.Text = tot_vat
+        Vat_txt.Text = vats
     End Sub
 
 
@@ -808,45 +808,41 @@
     Private Sub Done_but_Click(sender As Object, e As EventArgs) Handles Done_but.Click
         MsgBox(vbTab & Space(10) & "Krav Cafe" & vbCrLf & vbTab & "Lamar Village Sabang" & vbCrLf & vbTab & Space(3) & "Lipa City, Batangas" & vbCrLf & vbCrLf &
                "Name:" & vbTab & vbTab & Val(Costumer_name.Text) & vbCrLf &
-               "Subtotal:" & vbTab & vbTab & Val(sub_tot.Text) & vbCrLf &
-               "VAT:" & vbTab & vbTab & Val(vat.Text) & vbCrLf &
+               "Subtotal:" & vbTab & vbTab & Val(Subtotal_txt.Text) & vbCrLf &
+               "VAT:" & vbTab & vbTab & Val(Vat_txt.Text) & vbCrLf &
                "Discounted:" & vbTab & Val(num_discounted.Text) & Space(3) & Val(discounted_amount.Text) & vbCrLf &
-               "Total Due:" & vbTab & Val(tot_due.Text) & vbCrLf &
-               "Paid:" & vbTab & vbTab & Val(bayad.Text) & vbCrLf &
-               "Change:" & vbTab & vbTab & Val(sukli.Text) & vbCrLf & vbCrLf &
+               "Total Due:" & vbTab & Val(Totaldue_txt.Text) & vbCrLf &
+               "Paid:" & vbTab & vbTab & Val(Paid_txt.Text) & vbCrLf &
+               "Change:" & vbTab & vbTab & Val(Change_txt.Text) & vbCrLf & vbCrLf &
                "Date:" & vbTab & vbTab & My.Computer.Clock.LocalTime & vbCrLf & vbCrLf & Space(7) &
                "THANK YOU FOR DINING WITH US! " & vbCrLf & vbTab & Space(2) & "PLEASE COME AGAIN")
         Me.Close()
 
     End Sub
     Private Sub Panel27_Paint(sender As Object, e As PaintEventArgs) Handles Panel27.Paint
-        If dc1.Checked Or dc2.Checked Then
+        If Pwd_rad.Checked Or Senior_rad.Checked Then
             Panel28.Visible = True
         End If
     End Sub
     Private Sub no_discounted_Leave(sender As Object, e As EventArgs) Handles num_discounted.Leave
 
-        Dim noD, noC As Integer
-        noC = Val(num_customer.Text)
-        noD = Val(num_discounted.Text)
+        Dim num_dc, num_cm As Integer
+        num_cm = Val(num_customer.Text)
+        num_dc = Val(num_discounted.Text)
 
-        If noD > noC Then
+        If num_dc > num_cm Then
             MsgBox("Please input the correct number")
         End If
 
-        Dim disc, due As Single
-        Dim num_discount As Integer
-        Dim totalwithdisc As Decimal
+        Dim disc, due, duewithdisc As Single
+        due = Val(Totaldue_txt.Text)
 
-        totalwithdisc = Val(tot_due.Text)
-        due = Val(sub_tot.Text) + Val(vat.Text)
-        num_discount = Val(num_discounted.Text)
-
-        If dc1.Checked Or dc2.Checked Then
-            disc = ((due * 0.2) * num_discount)
+        If Pwd_rad.Checked Or Senior_rad.Checked Then
+            disc = ((due / num_dc) * 0.2) * num_dc
+            duewithdisc = due - disc
         End If
 
-        tot_due.Text = totalwithdisc - disc
+        Totaldue_txt.Text = duewithdisc
         discounted_amount.Text = disc
     End Sub
 
@@ -863,13 +859,13 @@
         Me.Hide()
     End Sub
 
-    Private Sub bayad_Leave(sender As Object, e As EventArgs) Handles bayad.Leave
+    Private Sub bayad_Leave(sender As Object, e As EventArgs) Handles Paid_txt.Leave
         Dim due, binayad As Single
-        due = Val(tot_due.Text)
-        binayad = Val(bayad.Text)
+        due = Val(Totaldue_txt.Text)
+        binayad = Val(Paid_txt.Text)
         If due > binayad Then
             MsgBox("Insufficient amount")
         End If
-        sukli.Text = Val(bayad.Text) - Val(tot_due.Text)
+        Change_txt.Text = Val(Paid_txt.Text) - Val(Totaldue_txt.Text)
     End Sub
 End Class

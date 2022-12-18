@@ -22,7 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
         Me.Tuna_Melt_but = New System.Windows.Forms.Button()
         Me.Tuna_Melt_qty = New System.Windows.Forms.TextBox()
         Me.Grilled_Cheese_but = New System.Windows.Forms.Button()
@@ -210,9 +210,9 @@ Partial Class Form2
         Me.Iced_black_22oz = New System.Windows.Forms.Button()
         Me.Iced_latte_22oz = New System.Windows.Forms.Button()
         Me.Iced_americano_22oz = New System.Windows.Forms.Button()
-        Me.sukli = New System.Windows.Forms.TextBox()
-        Me.bayad = New System.Windows.Forms.TextBox()
-        Me.tot_due = New System.Windows.Forms.TextBox()
+        Me.Change_txt = New System.Windows.Forms.TextBox()
+        Me.Paid_txt = New System.Windows.Forms.TextBox()
+        Me.Totaldue_txt = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -220,7 +220,7 @@ Partial Class Form2
         Me.Column_qty = New System.Windows.Forms.ColumnHeader()
         Me.Column_Desc = New System.Windows.Forms.ColumnHeader()
         Me.Column_Price = New System.Windows.Forms.ColumnHeader()
-        Me.vat = New System.Windows.Forms.TextBox()
+        Me.Vat_txt = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel28 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -228,8 +228,8 @@ Partial Class Form2
         Me.Label11 = New System.Windows.Forms.Label()
         Me.num_discounted = New System.Windows.Forms.TextBox()
         Me.Panel27 = New System.Windows.Forms.Panel()
-        Me.dc2 = New System.Windows.Forms.RadioButton()
-        Me.dc1 = New System.Windows.Forms.RadioButton()
+        Me.Senior_rad = New System.Windows.Forms.RadioButton()
+        Me.Pwd_rad = New System.Windows.Forms.RadioButton()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.num_customer = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -240,7 +240,7 @@ Partial Class Form2
         Me.Proceed_but = New System.Windows.Forms.Button()
         Me.Label87 = New System.Windows.Forms.Label()
         Me.Done_but = New System.Windows.Forms.Button()
-        Me.sub_tot = New System.Windows.Forms.TextBox()
+        Me.Subtotal_txt = New System.Windows.Forms.TextBox()
         Me.Label86 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
         Me.Label84 = New System.Windows.Forms.Label()
@@ -2111,31 +2111,31 @@ Partial Class Form2
         Me.Iced_americano_22oz.Text = "120"
         Me.Iced_americano_22oz.UseVisualStyleBackColor = True
         '
-        'sukli
+        'Change_txt
         '
-        Me.sukli.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.sukli.Location = New System.Drawing.Point(1232, 653)
-        Me.sukli.Name = "sukli"
-        Me.sukli.Size = New System.Drawing.Size(116, 20)
-        Me.sukli.TabIndex = 341
-        Me.sukli.Visible = False
+        Me.Change_txt.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Change_txt.Location = New System.Drawing.Point(1232, 653)
+        Me.Change_txt.Name = "Change_txt"
+        Me.Change_txt.Size = New System.Drawing.Size(116, 20)
+        Me.Change_txt.TabIndex = 341
+        Me.Change_txt.Visible = False
         '
-        'bayad
+        'Paid_txt
         '
-        Me.bayad.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.bayad.Location = New System.Drawing.Point(1232, 627)
-        Me.bayad.Name = "bayad"
-        Me.bayad.Size = New System.Drawing.Size(116, 20)
-        Me.bayad.TabIndex = 349
+        Me.Paid_txt.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Paid_txt.Location = New System.Drawing.Point(1232, 627)
+        Me.Paid_txt.Name = "Paid_txt"
+        Me.Paid_txt.Size = New System.Drawing.Size(116, 20)
+        Me.Paid_txt.TabIndex = 349
         '
-        'tot_due
+        'Totaldue_txt
         '
-        Me.tot_due.Enabled = False
-        Me.tot_due.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.tot_due.Location = New System.Drawing.Point(1232, 601)
-        Me.tot_due.Name = "tot_due"
-        Me.tot_due.Size = New System.Drawing.Size(116, 20)
-        Me.tot_due.TabIndex = 348
+        Me.Totaldue_txt.Enabled = False
+        Me.Totaldue_txt.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Totaldue_txt.Location = New System.Drawing.Point(1232, 601)
+        Me.Totaldue_txt.Name = "Totaldue_txt"
+        Me.Totaldue_txt.Size = New System.Drawing.Size(116, 20)
+        Me.Totaldue_txt.TabIndex = 348
         '
         'Label15
         '
@@ -2173,8 +2173,8 @@ Partial Class Form2
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Column_qty, Me.Column_Desc, Me.Column_Price})
         Me.ListView1.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        ListViewItem1.StateImageIndex = 0
-        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
+        ListViewItem2.StateImageIndex = 0
+        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem2})
         Me.ListView1.Location = New System.Drawing.Point(1141, 151)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(374, 215)
@@ -2197,14 +2197,14 @@ Partial Class Form2
         Me.Column_Price.Text = "Price"
         Me.Column_Price.Width = 70
         '
-        'vat
+        'Vat_txt
         '
-        Me.vat.Enabled = False
-        Me.vat.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.vat.Location = New System.Drawing.Point(1232, 575)
-        Me.vat.Name = "vat"
-        Me.vat.Size = New System.Drawing.Size(116, 20)
-        Me.vat.TabIndex = 343
+        Me.Vat_txt.Enabled = False
+        Me.Vat_txt.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Vat_txt.Location = New System.Drawing.Point(1232, 575)
+        Me.Vat_txt.Name = "Vat_txt"
+        Me.Vat_txt.Size = New System.Drawing.Size(116, 20)
+        Me.Vat_txt.TabIndex = 343
         '
         'Label13
         '
@@ -2272,36 +2272,36 @@ Partial Class Form2
         'Panel27
         '
         Me.Panel27.BackColor = System.Drawing.Color.Transparent
-        Me.Panel27.Controls.Add(Me.dc2)
-        Me.Panel27.Controls.Add(Me.dc1)
+        Me.Panel27.Controls.Add(Me.Senior_rad)
+        Me.Panel27.Controls.Add(Me.Pwd_rad)
         Me.Panel27.Location = New System.Drawing.Point(1354, 511)
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Size = New System.Drawing.Size(145, 47)
         Me.Panel27.TabIndex = 325
         '
-        'dc2
+        'Senior_rad
         '
-        Me.dc2.AutoSize = True
-        Me.dc2.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.dc2.Location = New System.Drawing.Point(8, 24)
-        Me.dc2.Name = "dc2"
-        Me.dc2.Size = New System.Drawing.Size(104, 15)
-        Me.dc2.TabIndex = 122
-        Me.dc2.TabStop = True
-        Me.dc2.Text = "Senior Citizen"
-        Me.dc2.UseVisualStyleBackColor = True
+        Me.Senior_rad.AutoSize = True
+        Me.Senior_rad.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Senior_rad.Location = New System.Drawing.Point(8, 24)
+        Me.Senior_rad.Name = "Senior_rad"
+        Me.Senior_rad.Size = New System.Drawing.Size(104, 15)
+        Me.Senior_rad.TabIndex = 122
+        Me.Senior_rad.TabStop = True
+        Me.Senior_rad.Text = "Senior Citizen"
+        Me.Senior_rad.UseVisualStyleBackColor = True
         '
-        'dc1
+        'Pwd_rad
         '
-        Me.dc1.AutoSize = True
-        Me.dc1.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.dc1.Location = New System.Drawing.Point(8, 3)
-        Me.dc1.Name = "dc1"
-        Me.dc1.Size = New System.Drawing.Size(47, 15)
-        Me.dc1.TabIndex = 121
-        Me.dc1.TabStop = True
-        Me.dc1.Text = "PWD"
-        Me.dc1.UseVisualStyleBackColor = True
+        Me.Pwd_rad.AutoSize = True
+        Me.Pwd_rad.Font = New System.Drawing.Font("HGPGothicE", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Pwd_rad.Location = New System.Drawing.Point(8, 3)
+        Me.Pwd_rad.Name = "Pwd_rad"
+        Me.Pwd_rad.Size = New System.Drawing.Size(47, 15)
+        Me.Pwd_rad.TabIndex = 121
+        Me.Pwd_rad.TabStop = True
+        Me.Pwd_rad.Text = "PWD"
+        Me.Pwd_rad.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -2405,14 +2405,14 @@ Partial Class Form2
         Me.Done_but.Text = "Done"
         Me.Done_but.UseVisualStyleBackColor = True
         '
-        'sub_tot
+        'Subtotal_txt
         '
-        Me.sub_tot.Enabled = False
-        Me.sub_tot.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.sub_tot.Location = New System.Drawing.Point(1232, 549)
-        Me.sub_tot.Name = "sub_tot"
-        Me.sub_tot.Size = New System.Drawing.Size(116, 20)
-        Me.sub_tot.TabIndex = 329
+        Me.Subtotal_txt.Enabled = False
+        Me.Subtotal_txt.Font = New System.Drawing.Font("HGPGothicE", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Subtotal_txt.Location = New System.Drawing.Point(1232, 549)
+        Me.Subtotal_txt.Name = "Subtotal_txt"
+        Me.Subtotal_txt.Size = New System.Drawing.Size(116, 20)
+        Me.Subtotal_txt.TabIndex = 329
         '
         'Label86
         '
@@ -2490,14 +2490,14 @@ Partial Class Form2
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox9)
-        Me.Controls.Add(Me.sukli)
-        Me.Controls.Add(Me.bayad)
-        Me.Controls.Add(Me.tot_due)
+        Me.Controls.Add(Me.Change_txt)
+        Me.Controls.Add(Me.Paid_txt)
+        Me.Controls.Add(Me.Totaldue_txt)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.vat)
+        Me.Controls.Add(Me.Vat_txt)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Panel28)
         Me.Controls.Add(Me.Panel27)
@@ -2511,7 +2511,7 @@ Partial Class Form2
         Me.Controls.Add(Me.Proceed_but)
         Me.Controls.Add(Me.Label87)
         Me.Controls.Add(Me.Done_but)
-        Me.Controls.Add(Me.sub_tot)
+        Me.Controls.Add(Me.Subtotal_txt)
         Me.Controls.Add(Me.Label86)
         Me.Controls.Add(Me.Label85)
         Me.Controls.Add(Me.Label84)
@@ -2910,9 +2910,9 @@ Partial Class Form2
     Friend WithEvents Iced_black_22oz As Button
     Friend WithEvents Iced_latte_22oz As Button
     Friend WithEvents Iced_americano_22oz As Button
-    Friend WithEvents sukli As TextBox
-    Friend WithEvents bayad As TextBox
-    Friend WithEvents tot_due As TextBox
+    Friend WithEvents Change_txt As TextBox
+    Friend WithEvents Paid_txt As TextBox
+    Friend WithEvents Totaldue_txt As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Button1 As Button
@@ -2920,7 +2920,7 @@ Partial Class Form2
     Friend WithEvents Column_qty As ColumnHeader
     Friend WithEvents Column_Desc As ColumnHeader
     Friend WithEvents Column_Price As ColumnHeader
-    Friend WithEvents vat As TextBox
+    Friend WithEvents Vat_txt As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Panel28 As Panel
     Friend WithEvents Label12 As Label
@@ -2928,8 +2928,8 @@ Partial Class Form2
     Friend WithEvents Label11 As Label
     Friend WithEvents num_discounted As TextBox
     Friend WithEvents Panel27 As Panel
-    Friend WithEvents dc2 As RadioButton
-    Friend WithEvents dc1 As RadioButton
+    Friend WithEvents Senior_rad As RadioButton
+    Friend WithEvents Pwd_rad As RadioButton
     Friend WithEvents Label10 As Label
     Friend WithEvents num_customer As TextBox
     Friend WithEvents Label9 As Label
@@ -2940,7 +2940,7 @@ Partial Class Form2
     Friend WithEvents Proceed_but As Button
     Friend WithEvents Label87 As Label
     Friend WithEvents Done_but As Button
-    Friend WithEvents sub_tot As TextBox
+    Friend WithEvents Subtotal_txt As TextBox
     Friend WithEvents Label86 As Label
     Friend WithEvents Label85 As Label
     Friend WithEvents Label84 As Label
